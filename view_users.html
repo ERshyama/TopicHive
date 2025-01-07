@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Users</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="angular.min.js"></script>
+  <script src="view_users.js"></script>
+</head>
+<body>
+<ul>
+  <li><a href="home.html">Home</a></li>
+</ul>
+<div ng-app="userApp" ng-controller="UserController">
+  <h2>All Users</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>Email</th>
+      <th>Display Name</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="user in users">
+      <td>{{ user.email }}</td>
+      <td>{{ user.displayname }}</td>
+      <td>{{ user.firstname }}</td>
+      <td>{{ user.lastname }}</td>
+      <td>{{ user.isBlocked ? "Banned" : "Active" }}</td>
+      <td>
+        <!-- Show "Ban User" for active users and "Remove Ban" for banned users -->
+        <button ng-if="!user.isBlocked && !user.isAdmin" ng-click="banUser(user.email)">Ban User</button>
+        <button ng-if="user.isBlocked" ng-click="removeBan(user.email)">Remove Ban</button>
+        <!-- Upgrade to Admin button visible only for non-admin users -->
+        <button ng-if="!user.isBlocked && !user.isAdmin" ng-click="upgradeToAdmin(user.email)">Upgrade to Admin</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <p id="output"></p>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,367 @@
+/* General Reset */
+body, h1, h2, h3, h4, p, div, input, button, form, table, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Navigation Bar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+li a:hover {
+    background-color: #111;
+}
+/* Login Page Styling */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.login-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+label {
+    text-align: left;
+    font-size: 14px;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input:focus {
+    border-color: #0066cc;
+    box-shadow: 0 0 4px rgba(0, 102, 204, 0.5);
+    outline: none;
+}
+
+button {
+    background-color: #555555;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #333333;
+}
+
+/* Sign-Up Prompt */
+.signup-prompt {
+    margin-top: 20px;
+}
+
+.signup-prompt p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.signup-prompt button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.signup-prompt button:hover {
+    background-color: #388e3c;
+}
+
+/* Error Messages */
+.error-message {
+    color: #cc0000;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.signup-container {
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.signup-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+label {
+    text-align: left;
+    font-size: 14px;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input:focus {
+    border-color: #0066cc;
+    box-shadow: 0 0 4px rgba(0, 102, 204, 0.5);
+    outline: none;
+}
+
+button {
+    background-color: #555555;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #333333;
+}
+
+/* Error Messages */
+.error-message {
+    color: #cc0000;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
+/* Page Container */
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+}
+
+input, textarea {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input:focus, textarea:focus {
+    border-color: #0066cc;
+    box-shadow: 0 0 4px rgba(0, 102, 204, 0.5);
+    outline: none;
+}
+
+/* Buttons */
+button {
+    background-color: #555555;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #333333;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+table td button {
+    padding: 8px 12px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+table td button.ban {
+    background-color: #f44336;
+}
+
+table td button.ban:hover {
+    background-color: #d32f2f;
+}
+
+table td button.upgrade {
+    background-color: #4caf50;
+}
+
+table td button.upgrade:hover {
+    background-color: #388e3c;
+}
+
+/* Sections */
+section {
+    margin-top: 20px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/* Specific Styling for Chatrooms */
+.chatroom-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.chatroom-tile {
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(45% - 20px);
+    text-align: center;
+}
+
+.chatroom-tile h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.chatroom-tile p {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.chatroom-tile button {
+    background-color: #0066cc;
+}
+
+.chatroom-tile button:hover {
+    background-color: #004080;
+}
+
+/* Error Messages */
+.error-message {
+    color: #cc0000;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .chatroom-tile {
+        width: calc(100% - 20px);
+    }
+
+    table th, table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+}

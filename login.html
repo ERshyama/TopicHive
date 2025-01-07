@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | TopicHive</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="angular.min.js"></script>
+    <script src="login.js"></script>
+</head>
+<body>
+<div class="login-container" ng-app="myApp" ng-controller="myController">
+    <h1>Login to TopicHive</h1>
+    <form name="myForm">
+        <label for="email">Email:</label>
+        <input type="text" id="email" ng-model="user.email" required placeholder="Enter your email">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" ng-model="user.password" required placeholder="Enter your password">
+
+        <button type="button" ng-click="submit()">Login</button>
+    </form>
+    <div class="signup-prompt">
+        <p>Don't have an account?</p>
+        <button type="button" ng-click="signup()">Sign Up</button>
+    </div>
+    <p id="output" class="error-message"></p>
+</div>
+</body>
+</html>

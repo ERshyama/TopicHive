@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>TopicHive</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="angular.min.js"> </script>
+    <script src="login.js"></script>
+</head>
+
+<h1>Login to TopicHive</h1>
+
+<div ng-app="myApp" ng-controller="myController">
+    <form name="myForm" >
+        Email
+        <input type="text" ng-model="user.email" required><br>
+        Password
+        <input type="password" ng-model="user.password" required><br>
+        <button ng-click="submit()">
+            submit
+        </button> <br><br>
+        don't have an account? <br>
+        <button ng-click="signup()">
+            sign up
+        </button>
+    </form>
+</div>
+
+<p id="output">
+</p>
+
+
+
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Chatrooms</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="angular.min.js"></script>
+    <script src="manage_chatrooms.js"></script>
+</head>
+<body>
+<ul>
+    <li><a href="home.html">Home</a></li>
+</ul>
+<div ng-app="chatroomApp" ng-controller="ChatroomController">
+    <h2>Manage Chatrooms</h2>
+
+    <!-- Create New Chatroom -->
+    <div>
+        <h3>Create New Chatroom</h3>
+        <label for="chatroomName">Name:</label>
+        <input type="text" id="chatroomName" ng-model="newChatroom.name">
+        <br>
+        <label for="chatroomDescription">Description:</label>
+        <input type="text" id="chatroomDescription" ng-model="newChatroom.description">
+        <br>
+        <button ng-click="createChatroom()">Create Chatroom</button>
+    </div>
+
+    <!-- Existing Chatrooms -->
+    <h3>Existing Chatrooms</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="chatroom in chatrooms">
+            <td>{{ chatroom.name }}</td>
+            <td>{{ chatroom.description }}</td>
+            <td><button ng-click="deleteChatroom(chatroom.id)">Delete Chatroom</button></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+

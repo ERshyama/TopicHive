@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopicHive</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="angular.min.js"></script>
+    <script src="home.js"></script>
+</head>
+<body>
+<!-- Header with Logout Button -->
+<header>
+    <h2>Welcome to TopicHive!</h2>
+</header>
+
+<div ng-app="myApp" ng-controller="HomeController">
+    <!-- Display "Browse other chatrooms!" button for non-admin users -->
+    <button class="logout-button" ng-click="logout()">Logout</button>
+
+    <button ng-if="!isAdmin" ng-click="browseChatrooms()">Browse other chatrooms!</button>
+    <button ng-if="isAdmin" ng-click="viewAllUsers()">Manage Users</button>
+    <button ng-if="isAdmin" ng-click="manageChatrooms()">Manage Chatrooms</button>
+
+    <h3>Your Chatrooms</h3>
+    <div class="chatroom-container">
+        <!-- Display chatrooms the user is already a member of -->
+        <div class="chatroom-tile" ng-repeat="chatroom in chatrooms">
+            <h3>{{ chatroom.name }}</h3>
+            <p>{{ chatroom.description }}</p>
+            <button ng-click="openChatroom(chatroom.id)">Enter Chatroom</button>
+            <!-- Leave Chatroom button visible only for non-admin users -->
+            <button ng-if="!isAdmin" ng-click="leaveChatroom(chatroom.id)">Leave Chatroom</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

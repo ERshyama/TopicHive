@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Chatrooms</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="angular.min.js"></script>
+  <script src="browse_chatrooms.js"></script>
+</head>
+<body>
+<!-- Navigation Bar -->
+<ul>
+  <li><a href="home.html">Home</a></li>
+</ul>
+
+<!-- Main Content -->
+<div class="container" ng-app="browseApp" ng-controller="BrowseController">
+  <h2>Browse Chatrooms</h2>
+  <div class="chatroom-container">
+    <div class="chatroom-tile" ng-repeat="chatroom in chatrooms">
+      <h4>{{ chatroom.name }}</h4>
+      <p>{{ chatroom.description }}</p>
+      <button class="enter-button" ng-click="joinChatroom(chatroom.id)">Join Chatroom</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+

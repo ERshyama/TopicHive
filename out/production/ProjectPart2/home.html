@@ -1,0 +1,104 @@
+<!--<html>-->
+<!--<head>-->
+<!--    <title>TopicHive</title>-->
+<!--    <link rel="stylesheet" href="style.css">-->
+<!--    <script src="angular.min.js"> </script>-->
+<!--    <script src="home.js"></script>-->
+<!--</head>-->
+<!--<ul>-->
+<!--    <li>-->
+<!--        <a href="home.html">Home</a>-->
+<!--    </li>-->
+<!--    <li >-->
+<!--        <a href="bookclub.html">Book Club</a>-->
+<!--    </li>-->
+<!--    <li>-->
+<!--        <a href="aboutus.html">About</a>-->
+<!--    </li>-->
+<!--    <li >-->
+<!--        <a href="login.html">Login</a>-->
+<!--    </li>-->
+<!--    <li >-->
+<!--        <a href="adminlogin.html">Admin Login</a>-->
+<!--    </li>-->
+<!--    <li >-->
+<!--        <a href="logout.html">Logout</a>-->
+<!--    </li>-->
+<!--</ul>-->
+
+
+
+<!--<h2>yaba daba do</h2>-->
+
+<!--<div ng-app="myApp" ng-controller="myController">-->
+<!--    <button ng-click="profile()">-->
+<!--        view my profile-->
+<!--    </button>-->
+<!--    <br><br>-->
+<!--    <button class = "pure-button" ng-click="bookclub()">-->
+<!--        view my bookclub-->
+<!--    </button>-->
+<!--    <br><br>-->
+<!--    <button ng-click="editprofile()">-->
+<!--        edit my profile-->
+<!--    </button>-->
+<!--</div>-->
+
+<!--<p id="output">-->
+<!--</p>-->
+
+
+
+
+<!--</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopicHive</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="angular.min.js"></script>
+    <script src="home.js"></script>
+</head>
+<body>
+<!--<ul>-->
+<!--    <li><a href="home.html">Home</a></li>-->
+<!--    <li><a href="bookclub.html">Book Club</a></li>-->
+<!--    <li><a href="aboutus.html">About</a></li>-->
+<!--    <li><a href="login.html">Login</a></li>-->
+<!--    <li><a href="adminlogin.html">Admin Login</a></li>-->
+<!--    <li><a href="logout.html">Logout</a></li>-->
+<!--</ul>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopicHive</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="angular.min.js"></script>
+    <script src="home.js"></script>
+</head>
+<body>
+
+<h2>Welcome to TopicHive!</h2>
+
+<div ng-app="myApp" ng-controller="ChatroomController">
+    <h3>Your Chatrooms</h3>
+    <div class="chatroom-container">
+        <div class="chatroom-tile" ng-repeat="chatroom in chatrooms">
+            <h3>{{ chatroom.name }}</h3>
+            <p>{{ chatroom.description }}</p>
+            <button ng-click="openChatroom(chatroom.id)">Enter Chatroom</button>
+        </div>
+    </div>
+</div>
+
+<p id="output"></p>
+</body>
+</html>
+
